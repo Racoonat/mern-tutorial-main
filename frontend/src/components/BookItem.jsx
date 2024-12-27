@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { deleteBook } from '../features/books/bookSlice.js'  // Asegúrate de tener la acción `deleteBook` en tu slice de libros
+import { deleteBook } from '../features/books/bookSlice'  // Asegúrate de tener la acción `deleteBook` en tu slice de libros
 
 function BookItem({ book }) {
   const dispatch = useDispatch()

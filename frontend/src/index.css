@@ -213,3 +213,28 @@ h3 {
     font-size: 1.5rem;
   }
 }
+
+.book {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #f9f9f9;
+}
+
+.book h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.book p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.close {
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

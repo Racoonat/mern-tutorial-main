@@ -39,7 +39,21 @@ function Dashboard() {
     <>
       <section className='heading'>
         <h1>Welcome {user && user.name}</h1>
-        <p>Bookhelf</p>
+        <p>Bookshelf</p>
+      </section>
+
+      <BookForm />
+
+      <section className='content'>
+        {books.length > 0 ? (
+          <div className='books'>
+            {books.map((book) => (
+              <BookItem key={book._id} book={book} />
+            ))}
+          </div>
+        ) : (
+          <h3>You have not shelved any book yet</h3>
+        )}
       </section>
     </>
   )

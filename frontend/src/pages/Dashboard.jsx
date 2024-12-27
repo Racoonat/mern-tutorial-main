@@ -6,6 +6,7 @@ import GoalItem from '../components/GoalItem'
 import Spinner from '../components/Spinner'
 import { getGoals } from '../features/goals/goalSlice'
 import BookForm from '../components/BookForm'
+import BookItem from '../components/BookItem'
 import { getBooks, reset } from '../features/books/bookSlice'
 
 function Dashboard() {
