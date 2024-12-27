@@ -4,9 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import GoalForm from '../components/GoalForm'
 import GoalItem from '../components/GoalItem'
 import Spinner from '../components/Spinner'
-import { getGoals } from '../features/goals/goalSlice'
-import BookForm from '../components/BookForm'
-import { getBooks, reset } from '../features/books/bookSlice'
+import { getGoals, reset } from '../features/goals/goalSlice'
 
 function Dashboard() {
   const navigate = useNavigate()
@@ -26,7 +24,7 @@ function Dashboard() {
       navigate('/login')
     }
 
-    dispatch(getBooks())
+    dispatch(getGoals())
 
     return () => {
       dispatch(reset())
@@ -41,10 +39,10 @@ function Dashboard() {
     <>
       <section className='heading'>
         <h1>Welcome {user && user.name}</h1>
-        <p>Bookshelf</p>
+        <p>Goals Dashboard</p>
       </section>
 
-      <BookForm />
+      <GoalForm />
 
       <section className='content'>
         {goals.length > 0 ? (
@@ -54,7 +52,7 @@ function Dashboard() {
             ))}
           </div>
         ) : (
-          <h3>You have not shelved any book yet</h3>
+          <h3>You have not set any goals</h3>
         )}
       </section>
     </>
